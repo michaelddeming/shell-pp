@@ -1,10 +1,11 @@
 
-
-#include <iostream>
-using namespace std;
+#include "shell/Shell.hpp"
 
 int main() {
 
-    cout << "Welcome to cpp_shell!" << endl;
+    Shell shell;
+    shell.run();
     return 0;
+
+
 }
