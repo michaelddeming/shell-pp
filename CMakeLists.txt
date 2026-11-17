@@ -14,6 +14,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(shell++
     src/main.cpp
     src/Shell.cpp
+    src/Parser.cpp
 )
 
 target_include_directories(shell++ PRIVATE include)

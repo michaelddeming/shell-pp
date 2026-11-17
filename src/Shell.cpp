@@ -3,11 +3,24 @@
 #include <iostream>
 #include <string>
 #include <string_view>
+#include <vector>
 
-bool Shell::check_input(std::string_view input) {
+bool Shell::check_input(std::string input) {
 
-    if (input == "exit") {
+    std::vector<std::string> ibuffer = Shell::parser.parse(input);
+
+    if (ibuffer[0] == "exit") {
         std::cout << "Goodbye!" << "\n";
+        return true;
+    }
+
+    else if (ibuffer[0] == "test") {
+        
+        int n = ibuffer.size();
+
+        for (int i = 0; i < n; i++) {
+            std::cout << ibuffer[i] << "\n";
+        }
         return true;
     }
     else {
